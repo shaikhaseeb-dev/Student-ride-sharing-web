@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offer a Ride</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Offer a Ride</h1>
+    <form method="POST" action="/submit_offer_ride">
+        <div class="form-group">
+            <label for="origin">Start:</label>
+            <input type="text" id="origin" name="origin" required>
+        </div>
+
+        <div class="form-group">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time"> Starting Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+
+        <div class="form-group">
+            <label for="seats_available">Seats Available:</label>
+            <input type="text" id="seats_available" name="seats_available" required>
+        </div>
+
+        <button type="submit" class="offer-btn">Offer a Ride</button>
+
+    </form>
+</div>
+
+</body>
+</html>

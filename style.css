@@ -1,0 +1,124 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Form Container */
+.form-container {
+    background-image: url('https://example.com/ai-background.jpg'); /* AI-themed background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form Content Styling */
+.form-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="datetime-local"], input[type="number"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="datetime-local"]:focus, input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Flash messages */
+.flash-messages {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.flash-messages li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flash-messages .success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-messages .danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-content {
+        padding: 20px;
+        width: 100%;
+    }
+}

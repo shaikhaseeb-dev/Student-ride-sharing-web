@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Pickup</th>
+                <th>Dropoff</th>
+                <th>Date & Time</th>
+                <th>Seats</th>
+            </tr>
+            {% for request in requests %}
+                <tr>
+                    <td>{{ request.name }}</td>
+                    <td>{{ request.pickup }}</td>
+                    <td>{{ request.dropoff }}</td>
+                    <td>{{ request.datetime }}</td>
+                    <td>{{ request.seats }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

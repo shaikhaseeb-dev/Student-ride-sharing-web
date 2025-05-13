@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Rides</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Available Rides</h2>
+        
+        <!-- List of Requested Rides -->
+        <h3>Requested Rides</h3>
+        {% for ride in rides %}
+            <div class="ride">
+                <p><strong>Rider:</strong> {{ ride.rider_name }}</p>
+                <p><strong>Origin:</strong> {{ ride.origin }}</p>
+                <p><strong>Destination:</strong> {{ ride.destination }}</p>
+                <p><strong>Ride Date:</strong> {{ ride.ride_date }}</p>
+                <p><strong>Ride Time:</strong> {{ ride.ride_time }}</p>
+            </div>
+        {% endfor %}
+
+        <br>
+        <a href="{{ url_for('request_ride') }}">Request a Ride</a>
+    </div>
+</body>
+</html>
